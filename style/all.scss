@@ -1,8 +1,8 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -12,68 +12,59 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
+article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-  display: block;
+	display: block;
 }
-
 body {
-  line-height: 1;
+	line-height: 1;
 }
-
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
-
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
-
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
-
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 /*如果是用bs4已有內建此段語法*/
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+*,*:before,*:after{
+              box-sizing:border-box;
 }
 
-img {
+img{
   max-width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit:cover;
   /*下block 去除底下img buttom px用*/
   display: block;
 }
 
-a {
-  display: inline-block;
+a{
+  display:inline-block;
   text-decoration: none;
   /*&:hover{}*/
 }
-
 /*用bs4加入以下兩個
 ul{
   padding: 0;
@@ -82,69 +73,57 @@ ul{
 ul,li{
   list-style:none
 }*/
-body {
+body{
   line-height: 1.2;
 }
-
-.banner {
+.banner{
   width: 100%;
-  height: 100vh;
+  height: 100vh;//視窗高度 可更改
   background-color: #ccc;
-  background: linear-gradient(115deg, #7bf 50%, transparent 50%) center center/100% 100%, url("https://picsum.photos/1200/600?random=10") right center/auto 100%;
+  //背景縮寫技巧  漸層：(角度，背景色，第一個漸層色空間，第二個漸層色空間) background-position(位置)  / 漸層寬高,用逗號隔開可寫多重背景
+  background: linear-gradient(115deg, #7bf 50%,transparent 50%) center center / 100% 100%,
+  //多重背景寫法 用逗號,隔開  url(背景連結) background-position(位置) /圖片寬高
+  url("https://picsum.photos/1200/600?random=10")right center / auto 100%;
+  //google font字型
   font-family: 'Noto Sans TC', sans-serif;
+  
 }
-
-.banner-container {
+.banner-container{
   width: 100%;
-  max-width: 1440px;
+  max-width: 1440px;//類rwd效果
   height: 100%;
   margin: 0 auto;
 }
-
-.banner-body {
+.banner-body{
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;//主軸垂直 
+  justify-content: center;
+  align-items: flex-start;
 }
-
-.banner-title {
+.banner-title{
   font-size: 60px;
   border-bottom: 2px solid	#FF60AF;
   font-weight: 900;
   padding: 10px;
   margin-bottom: 10px;
 }
-
-.banner-small {
+.banner-small{
   display: block;
   font-size: 43px;
   font-weight: 700;
   padding: 10px;
   margin-bottom: 10px;
 }
-
-.banner-subtitle {
+.banner-subtitle{
   font-size: 35px;
   font-weight: 700;
   padding: 10px;
   margin-bottom: 10px;
 }
-
-.banner-text {
+.banner-text{
   font-size: 25px;
   font-weight: 300;
   padding: 10px;
   margin-bottom: 10px;
 }
-/*# sourceMappingURL=all.css.map */
